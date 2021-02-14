@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p><a href="/add">add developer</a></p>
+        <form action="/logout" method="POST">
+        <button type="submit">Logout</button>
+    </form>
+        <table align="center">
+            <thead>
+                <tr>
+                    <td>id</td>
+                    <td>имя</td>
+                    <td>фамилия</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="d : ${DEVELOPERS}">
+                    <td th:text="${d.id}"></td>
+                    <td th:text="${d.firstname}"></td>
+                    <td th:text="${d.lastname}"></td>
+            </tbody>
+        </table>
+    </body>
+</html>
